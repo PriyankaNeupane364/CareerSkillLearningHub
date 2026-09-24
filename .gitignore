@@ -2,5 +2,9 @@
 bin/
 obj/
 packages/
+Backup/
 *.user
 *.suo
+*.legacy.bak
+UpgradeLog*.htm
+App_Data/errors.log

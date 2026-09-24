@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="CareerSkillHub.Masterpages.Site" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><%: Page.Title %> | Career Skill Hub</title>
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Content/Site.css") + "?v=5" %>" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+    <form id="frmMain" runat="server">
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="<%= ResolveUrl("~/Default.aspx") %>" class="brand">
+                    <span class="brand-text">Career Skill Hub</span>
+                </a>
+                <nav class="main-nav" aria-label="Primary">
+                    <ul>
+                        <li><a href="<%= ResolveUrl("~/Default.aspx") %>">Home</a></li>
+                        <li><a href="<%= ResolveUrl("~/About.aspx") %>">About</a></li>
+                        <li><a href="<%= ResolveUrl("~/Pages/Courses.aspx") %>">Courses</a></li>
+
+                        <asp:PlaceHolder ID="phGuest" runat="server">
+                            <li class="nav-right"><a href="<%= ResolveUrl("~/Account/Login.aspx") %>">Login</a></li>
+                            <li class="nav-right"><a class="btn btn-small" href="<%= ResolveUrl("~/Account/Register.aspx") %>">Register</a></li>
+                        </asp:PlaceHolder>
+
+                        <asp:PlaceHolder ID="phLoggedIn" runat="server" Visible="false">
+                            <asp:PlaceHolder ID="phStudent" runat="server" Visible="false">
+                                <li><a href="<%= ResolveUrl("~/Student/Dashboard.aspx") %>">Dashboard</a></li>
+                                <li><a href="<%= ResolveUrl("~/Student/Courses.aspx") %>">Courses</a></li>
+                                <li><a href="<%= ResolveUrl("~/Student/MyCourses.aspx") %>">My Courses</a></li>
+                                <li><a href="<%= ResolveUrl("~/Student/Progress.aspx") %>">Progress</a></li>
+                            </asp:PlaceHolder>
+                            <asp:PlaceHolder ID="phAdmin" runat="server" Visible="false">
+                                <li><a href="<%= ResolveUrl("~/Admin/Dashboard.aspx") %>">Admin</a></li>
+                            </asp:PlaceHolder>
+                            <asp:PlaceHolder ID="phInstructor" runat="server" Visible="false">
+                                <li><a href="<%= ResolveUrl("~/Instructor/Dashboard.aspx") %>">Instructor</a></li>
+                            </asp:PlaceHolder>
+                            <li class="nav-right"><span class="nav-welcome">Hi, <asp:Literal ID="litWelcome" runat="server" /></span></li>
+                            <li class="nav-right"><a href="<%= ResolveUrl("~/Account/Profile.aspx") %>">Profile</a></li>
+                            <li class="nav-right">
+                                <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkLogout_Click" CausesValidation="false">Logout</asp:LinkButton>
+                            </li>
+                        </asp:PlaceHolder>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" class="container site-main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <section>
+                    <h3>Career Skill Hub</h3>
+                    <p>Learn the career skills that help students and fresh graduates succeed: resume writing, interviews, communication, leadership, teamwork, time management and presentations.</p>
+                </section>
+                <section>
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="<%= ResolveUrl("~/Default.aspx") %>">Home</a></li>
+                        <li><a href="<%= ResolveUrl("~/About.aspx") %>">About</a></li>
+                        <li><a href="<%= ResolveUrl("~/Pages/Courses.aspx") %>">Courses</a></li>
+                        <li><a href="<%= ResolveUrl("~/Account/Register.aspx") %>">Register</a></li>
+                    </ul>
+                </section>
+            </div>
+            <p class="footer-copy">&copy; <%= DateTime.Now.Year %> Career Skill Hub - APU CT050-3-2-WAPP Group Project</p>
+        </footer>
+
+        <script src="<%= ResolveUrl("~/Scripts/Site.js") %>"></script>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server" />
+    </form>
+</body>
+</html>

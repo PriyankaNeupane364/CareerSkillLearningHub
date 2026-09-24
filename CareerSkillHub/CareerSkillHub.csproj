@@ -1,0 +1,183 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <RootNamespace>CareerSkillHub</RootNamespace>
+    <AssemblyName>CareerSkillHub</AssemblyName>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <OutputPath>bin\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RunCommand>$(ProgramFiles)\IIS Express\iisexpress</RunCommand>
+    <RunArguments>/path:&quot;$(MSBuildProjectDirectory)&quot; /port:51900</RunArguments>
+    <RunWorkingDirectory>$(MSBuildProjectDirectory)</RunWorkingDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="About.aspx.cs" />
+    <Compile Include="About.aspx.designer.cs" />
+    <Compile Include="Account\Login.aspx.cs" />
+    <Compile Include="Account\Login.aspx.designer.cs" />
+    <Compile Include="Account\Logout.aspx.cs" />
+    <Compile Include="Account\Logout.aspx.designer.cs" />
+    <Compile Include="Account\Profile.aspx.cs" />
+    <Compile Include="Account\Profile.aspx.designer.cs" />
+    <Compile Include="Account\Register.aspx.cs" />
+    <Compile Include="Account\Register.aspx.designer.cs" />
+    <Compile Include="Admin\Courses.aspx.cs" />
+    <Compile Include="Admin\Courses.aspx.designer.cs" />
+    <Compile Include="Admin\Dashboard.aspx.cs" />
+    <Compile Include="Admin\Dashboard.aspx.designer.cs" />
+    <Compile Include="Admin\Feedback.aspx.cs" />
+    <Compile Include="Admin\Feedback.aspx.designer.cs" />
+    <Compile Include="Admin\LearningMaterials.aspx.cs" />
+    <Compile Include="Admin\LearningMaterials.aspx.designer.cs" />
+    <Compile Include="Admin\Questions.aspx.cs" />
+    <Compile Include="Admin\Questions.aspx.designer.cs" />
+    <Compile Include="Admin\Quizzes.aspx.cs" />
+    <Compile Include="Admin\Quizzes.aspx.designer.cs" />
+    <Compile Include="Admin\Users.aspx.cs" />
+    <Compile Include="Admin\Users.aspx.designer.cs" />
+    <Compile Include="Admin\WebsiteContent.aspx.cs" />
+    <Compile Include="Admin\WebsiteContent.aspx.designer.cs" />
+    <Compile Include="BLL\AuthBLL.cs" />
+    <Compile Include="BLL\CourseBLL.cs" />
+    <Compile Include="BLL\EnrollmentBLL.cs" />
+    <Compile Include="BLL\FeedbackBLL.cs" />
+    <Compile Include="BLL\LearningMaterialBLL.cs" />
+    <Compile Include="BLL\ProgressBLL.cs" />
+    <Compile Include="BLL\QuizBLL.cs" />
+    <Compile Include="BLL\QuizResultBLL.cs" />
+    <Compile Include="BLL\UserBLL.cs" />
+    <Compile Include="BLL\WebsiteContentBLL.cs" />
+    <Compile Include="Data_Access_Layer\CourseDAL.cs" />
+    <Compile Include="Data_Access_Layer\DbHelper.cs" />
+    <Compile Include="Data_Access_Layer\EnrollmentDAL.cs" />
+    <Compile Include="Data_Access_Layer\FeedbackDAL.cs" />
+    <Compile Include="Data_Access_Layer\LearningMaterialDAL.cs" />
+    <Compile Include="Data_Access_Layer\ProgressDAL.cs" />
+    <Compile Include="Data_Access_Layer\QuestionDAL.cs" />
+    <Compile Include="Data_Access_Layer\QuizDAL.cs" />
+    <Compile Include="Data_Access_Layer\QuizResultDAL.cs" />
+    <Compile Include="Data_Access_Layer\UserDAL.cs" />
+    <Compile Include="Data_Access_Layer\WebsiteContentDAL.cs" />
+    <Compile Include="Default.aspx.cs" />
+    <Compile Include="Default.aspx.designer.cs" />
+    <Compile Include="Helpers\PasswordHelper.cs" />
+    <Compile Include="Helpers\ValidationException.cs" />
+    <Compile Include="Instructor\Courses.aspx.cs" />
+    <Compile Include="Instructor\Courses.aspx.designer.cs" />
+    <Compile Include="Instructor\Dashboard.aspx.cs" />
+    <Compile Include="Instructor\Dashboard.aspx.designer.cs" />
+    <Compile Include="Instructor\Materials.aspx.cs" />
+    <Compile Include="Instructor\Materials.aspx.designer.cs" />
+    <Compile Include="Instructor\Questions.aspx.cs" />
+    <Compile Include="Instructor\Questions.aspx.designer.cs" />
+    <Compile Include="Instructor\Quizzes.aspx.cs" />
+    <Compile Include="Instructor\Quizzes.aspx.designer.cs" />
+    <Compile Include="Masterpages\Site.Master.cs" />
+    <Compile Include="Masterpages\Site.Master.designer.cs" />
+    <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Enrollment.cs" />
+    <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\LearningMaterial.cs" />
+    <Compile Include="Models\Progress.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Quiz.cs" />
+    <Compile Include="Models\QuizResult.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\WebsiteContent.cs" />
+    <Compile Include="Pages\AccessDenied.aspx.cs" />
+    <Compile Include="Pages\AccessDenied.aspx.designer.cs" />
+    <Compile Include="Pages\CourseDetails.aspx.cs" />
+    <Compile Include="Pages\CourseDetails.aspx.designer.cs" />
+    <Compile Include="Pages\Courses.aspx.cs" />
+    <Compile Include="Pages\Courses.aspx.designer.cs" />
+    <Compile Include="Student\Courses.aspx.cs" />
+    <Compile Include="Student\Courses.aspx.designer.cs" />
+    <Compile Include="Student\Dashboard.aspx.cs" />
+    <Compile Include="Student\Dashboard.aspx.designer.cs" />
+    <Compile Include="Student\Feedback.aspx.cs" />
+    <Compile Include="Student\Feedback.aspx.designer.cs" />
+    <Compile Include="Student\Materials.aspx.cs" />
+    <Compile Include="Student\Materials.aspx.designer.cs" />
+    <Compile Include="Student\MyCourses.aspx.cs" />
+    <Compile Include="Student\MyCourses.aspx.designer.cs" />
+    <Compile Include="Student\Progress.aspx.cs" />
+    <Compile Include="Student\Progress.aspx.designer.cs" />
+    <Compile Include="Student\Quiz.aspx.cs" />
+    <Compile Include="Student\Quiz.aspx.designer.cs" />
+    <Compile Include="Student\QuizResult.aspx.cs" />
+    <Compile Include="Student\QuizResult.aspx.designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Logout.aspx" />
+    <Content Include="Account\Profile.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Admin\Courses.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\Feedback.aspx" />
+    <Content Include="Admin\LearningMaterials.aspx" />
+    <Content Include="Admin\Questions.aspx" />
+    <Content Include="Admin\Quizzes.aspx" />
+    <Content Include="Admin\Users.aspx" />
+    <Content Include="Admin\WebsiteContent.aspx" />
+    <Content Include="App_Data\errors.log" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Database\SQL Query\CareerSkillHub_Queries.sql" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\communication.png" />
+    <Content Include="Images\course.jpg" />
+    <Content Include="Images\course.png" />
+    <Content Include="Images\interview.png" />
+    <Content Include="Images\leadership.png" />
+    <Content Include="Images\presentation.png" />
+    <Content Include="Images\resume.png" />
+    <Content Include="Images\teamwork.png" />
+    <Content Include="Images\time.png" />
+    <Content Include="Instructor\Courses.aspx" />
+    <Content Include="Instructor\Dashboard.aspx" />
+    <Content Include="Instructor\Materials.aspx" />
+    <Content Include="Instructor\Questions.aspx" />
+    <Content Include="Instructor\Quizzes.aspx" />
+    <Content Include="Masterpages\Site.Master" />
+    <Content Include="Pages\AccessDenied.aspx" />
+    <Content Include="Pages\CourseDetails.aspx" />
+    <Content Include="Pages\Courses.aspx" />
+    <Content Include="Scripts\Site.js" />
+    <Content Include="Student\Courses.aspx" />
+    <Content Include="Student\Dashboard.aspx" />
+    <Content Include="Student\Feedback.aspx" />
+    <Content Include="Student\Materials.aspx" />
+    <Content Include="Student\MyCourses.aspx" />
+    <Content Include="Student\Progress.aspx" />
+    <Content Include="Student\Quiz.aspx" />
+    <Content Include="Student\QuizResult.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+
+</Project>
